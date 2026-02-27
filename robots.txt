@@ -1,0 +1,13 @@
+# robots.txt para imosimula.pt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://imosimula.pt/sitemap.xml
+
+# Bloquear recursos desnecessários para crawlers
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/chunks/

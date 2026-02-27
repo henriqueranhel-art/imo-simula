@@ -1,12 +1,141 @@
 <!DOCTYPE html>
-<html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ImoSimula — Simulador de Investimento Imobiliário</title>
-    <meta name="description" content="Simulador de investimento imobiliário em Portugal. Calcula yields, cash flow, ROI e mais." />
-  </head>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Básico -->
+  <title>ImoSimula — Simulador de Investimento Imobiliário em Portugal</title>
+  <meta name="description" content="Calcule a rentabilidade de investimentos imobiliários em Portugal. Simule yield, cash flow, ROI e payback. Inclui IMT, IRS sobre rendas e custos de venda. Gratuito.">
+  <meta name="keywords" content="simulador imobiliário, investimento imobiliário portugal, calcular yield, rentabilidade arrendamento, ROI imóvel, cash flow imobiliário, IMT, IRS rendas, cap rate, simulador rendas">
+  <meta name="author" content="ImoSimula">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://imosimula.pt/">
+  
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:title" content="ImoSimula — Simulador de Investimento Imobiliário">
+  <meta property="og:description" content="Calcule yield, cash flow, ROI e payback de investimentos imobiliários em Portugal. Gratuito e sem registo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://imosimula.pt/">
+  <meta property="og:image" content="https://imosimula.pt/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ImoSimula - Simulador de Investimento Imobiliário">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="ImoSimula">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ImoSimula — Simulador de Investimento Imobiliário">
+  <meta name="twitter:description" content="Calcule yield, cash flow, ROI e payback de investimentos imobiliários em Portugal.">
+  <meta name="twitter:image" content="https://imosimula.pt/og-image.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#16a34a">
+  
+  <!-- Preconnect para performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ImoSimula",
+    "alternateName": "Simulador de Investimento Imobiliário",
+    "description": "Simulador gratuito para calcular a rentabilidade de investimentos imobiliários em Portugal. Calcula yield bruta, yield líquida, cap rate, cash flow, ROI e payback. Inclui cálculo de IMT para investimento, IRS sobre rendas e custos de venda.",
+    "url": "https://imosimula.pt",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "browserRequirements": "Requires JavaScript",
+    "softwareVersion": "1.0",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "featureList": [
+      "Cálculo de Yield Bruta e Líquida",
+      "Cálculo de Cap Rate",
+      "Simulação de Cash Flow mensal e anual",
+      "Cálculo de ROI e Payback",
+      "IMT para investimento (não HPP)",
+      "IRS sobre rendas por duração de contrato",
+      "Custos de venda (comissão + mais-valias)",
+      "Projeção temporal com gráficos"
+    ],
+    "screenshot": "https://imosimula.pt/og-image.png",
+    "author": {
+      "@type": "Organization",
+      "name": "ImoSimula",
+      "url": "https://imosimula.pt"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ImoSimula",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://imosimula.pt/logo.png"
+      }
+    },
+    "inLanguage": "pt-PT",
+    "isAccessibleForFree": true,
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Investidores imobiliários em Portugal"
+    }
+  }
+  </script>
+  
+  <!-- FAQ Structured Data (para aparecer nas pesquisas) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que é a Yield Bruta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Yield Bruta é a renda anual dividida pelo valor do imóvel, expressa em percentagem. É uma métrica simples para comparar imóveis rapidamente, mas não considera despesas, impostos ou financiamento. Uma boa yield bruta em Portugal é superior a 5%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é o Cap Rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O Cap Rate (Capitalization Rate) é o NOI (Net Operating Income) dividido pelo valor do imóvel. O NOI é a renda menos as despesas operacionais, antes de impostos. É o padrão internacional para comparar investimentos imobiliários. Um bom cap rate é superior a 4.5%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como é calculado o IMT para investimento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O IMT para segundas habitações e investimento usa uma tabela diferente da habitação própria permanente (HPP). As taxas são mais elevadas: 1% até €101.917, subindo progressivamente até 7.5% para valores acima de €1.102.920."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a taxa de IRS sobre rendas em Portugal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A taxa de IRS sobre rendas varia conforme a duração do contrato de arrendamento: 28% para contratos inferiores a 2 anos, 25% de 2 a 5 anos, 15% de 5 a 10 anos, 10% de 10 a 20 anos, e 5% para contratos de 20 anos ou mais."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
