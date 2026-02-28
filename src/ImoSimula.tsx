@@ -1,6 +1,8 @@
 import { useState, useMemo, useRef, useEffect, type ReactNode } from "react";
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend, BarChart, Bar, Cell, ReferenceLine } from "recharts";
-import { ChevronDown, X, HelpCircle } from "lucide-react";
+import { ChevronDown, X, HelpCircle, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 /* ═══ UTILS ═══ */
 const fmt = (v: number) => new Intl.NumberFormat("pt-PT", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(v);
@@ -376,6 +378,10 @@ export default function ImoSimula() {
             <span className="text-base font-bold text-gray-800">ImoSimula</span>
             <span className="text-xs text-gray-400 ml-1">Simulador de Investimento</span>
           </div>
+          <Link to="/como-funciona" className="flex items-center gap-2 text-sm text-green-600 hover:text-green-700 font-medium transition">
+            <BookOpen size={16} />
+            Como Funciona
+          </Link>
         </div>
       </header>
 
@@ -612,10 +618,7 @@ export default function ImoSimula() {
 
       </main>
 
-      {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 px-4 py-2 text-center mt-auto">
-        <p className="text-[10px] text-gray-400">⚠️ Simulador informativo — não constitui aconselhamento financeiro.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
